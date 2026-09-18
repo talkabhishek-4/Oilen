@@ -16,12 +16,12 @@ import HazardTrends from './pages/HazardTrends';
 export default function App() {
   return (
     <Routes>
-      {/* Landing Shell */}
+      {/* Landing */}
       <Route path="/" element={<HomeLayout />}>
         <Route index element={<Home />} />
       </Route>
 
-      {/* OilLens Dashboard Console Shell */}
+      {/* OilLens Dashboard Console */}
       <Route path="/app" element={<DashboardLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="intelligence" element={<SIFIntelligence />} />
@@ -30,7 +30,6 @@ export default function App() {
         <Route path="trends" element={<HazardTrends />} />
       </Route>
 
-      {/* Catch-all redirect */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
