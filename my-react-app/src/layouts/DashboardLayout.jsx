@@ -27,7 +27,7 @@ export default function DashboardLayout() {
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] text-slate-900 flex flex-col font-sans">
       
-      {/* Top Navbar Header[cite: 4] */}
+      
       <header className="sticky top-0 z-40 bg-white border-b border-slate-200/90 px-4 h-16 flex items-center justify-between shadow-2xs">
         <div className="flex items-center gap-3">
           <button
@@ -38,7 +38,7 @@ export default function DashboardLayout() {
             {drawerOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
 
-          {/* Logo & Brand[cite: 4] */}
+      
           <Link to="/" className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-blue-600 flex items-center justify-center text-white">
               <Shield className="w-4 h-4 stroke-[2.2] fill-white/20" />
@@ -63,7 +63,6 @@ export default function DashboardLayout() {
         </button>
       </header>
 
-      {/* Slide-out Drawer for extra links */}
       {drawerOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs flex">
           <div className="w-72 bg-white h-full p-5 flex flex-col justify-between shadow-xl">
@@ -118,7 +117,7 @@ export default function DashboardLayout() {
         <Outlet />
       </main>
 
-      {/* Bottom Fixed Navigation Bar[cite: 4] */}
+      
       <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200/90 h-16 px-2 flex items-center justify-around shadow-sm">
         {navItems.map((item) => {
           const Icon = item.icon;
